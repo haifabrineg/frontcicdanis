@@ -1,6 +1,8 @@
 pipeline{
-    agent any
-   
+ agent any
+    tools {
+        maven : 'MAVEN'
+    }   
     stages {
         stage('Getting project from Git') {
             steps{
@@ -42,12 +44,12 @@ pipeline{
         }*/
         
 
-      
-        stage('Publish to Nexus') {
+          stage('Publish to Nexus') {
             steps {
                 script {
                     
-  sh 'mvn  -B -DskipTests deploy -e '
+configFileProvider([configFile(fileId: 'maven-settings', variable: 'settings')]) {
+  sh 'mvn  -B -DskipTests deploy -s $settings'}
                 
                 }
             }
