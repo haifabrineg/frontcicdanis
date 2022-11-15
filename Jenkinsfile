@@ -1,8 +1,7 @@
 pipeline{
  agent any
-    tools {
-        maven : 'MAVEN'
-    }   
+      tools {maven "MAVEN"}
+ 
     stages {
         stage('Getting project from Git') {
             steps{
