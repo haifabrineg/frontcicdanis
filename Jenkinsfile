@@ -62,10 +62,10 @@ pipeline{
                   stage('Push Docker Image') {
                       steps {
                           script {
-                           withCredentials([string(credentialsId: 'hsounabm', variable: 'dockerhubpwd')]) {
-                              sh 'docker login -u hsounabm -p ${dockerhubpwd}'
+                           withCredentials([string(credentialsId: 'haifa123456', variable: 'dockerhubpwd')]) {
+                              sh 'docker login -u haifa123456 -p ${dockerhubpwd}'
                            }
-                           sh 'docker push hsounabm/spring-app'
+                           sh 'docker push haifa123456/spring-app'
                           }
                       }
                   }
