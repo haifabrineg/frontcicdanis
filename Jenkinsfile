@@ -11,7 +11,7 @@ pipeline{
 
 
 
-
+/*
 
         stage('Cleaning the project') {
             steps{
@@ -19,7 +19,7 @@ pipeline{
             }
         }
 
-
+*/
 
 
 
