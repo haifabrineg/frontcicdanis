@@ -19,7 +19,7 @@ pipeline{
             }
         }
 
-*/
+
 
 
 
@@ -28,7 +28,7 @@ pipeline{
                 sh "ng build  "
             }
         }
-
+*/
 
 
 stage('Build Docker Image') {
