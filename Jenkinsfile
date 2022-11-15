@@ -47,7 +47,7 @@ pipeline{
             steps {
                 script {
                     
-  sh 'mvn  -B -DskipTests deploy -s '
+  sh 'mvn  -B -DskipTests deploy -e '
                 
                 }
             }
