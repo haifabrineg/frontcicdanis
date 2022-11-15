@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage('Getting project from Git') {
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/hassenbm88/CICD_Academic_Project.git'], extensions: [], userRemoteConfigs: [[credentialsId: '18558545-93a9-448f-bf74-85184c601676', url: 'https://github.com/hassenbm88/CICD_Academic_Project.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/haifabrineg/frontcicdanis.git'], extensions: [], userRemoteConfigs: [[credentialsId: '73311888', url: 'https://github.com/haifabrineg/frontcicdanis.git']]])
             }
         }
         
@@ -33,7 +33,7 @@ pipeline{
         }
         
          
-        
+       /* 
      
         stage('Code Quality Check via SonarQube') {
             steps{
@@ -41,7 +41,7 @@ pipeline{
              sh " mvn sonar:sonar -Dsonar.projectKey=CICD_Academic_Project -Dsonar.host.url=http://localhost:9000 -Dsonar.login=5f74b4c464cd1ad62d859b40eb6c42eda392d71e"
  
             }
-        }
+        }*/
         
 
       
@@ -58,7 +58,7 @@ configFileProvider([configFile(fileId: 'maven-settings', variable: 'settings')])
           stage('Build Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t hsounabm/spring-app .'
+                            sh 'docker build -t haifa123456/spring-app .'
                           }
                       }
                   }
