@@ -10,13 +10,7 @@ pipeline{
 	stages {
 
 
- stage('Getting project from Git') {
-            steps{
-      			checkout([$class: 'GitSCM', branches: [[name: '*/aziz']],
-			extensions: [],
-			userRemoteConfigs: [[url: 'https://github.com/med-aziz-ben-haha/cicdfront.git']]])
-            }
-        }
+
 
 
         stage('Cleaning the project') {
@@ -40,13 +34,13 @@ pipeline{
 stage('Build Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t azizbenhaha/angular-app:latest .'
+                            sh 'docker build -t haifa123456/angular-app:latest .'
                           }
                       }
                   }
 
 
-
+/*
 
                   stage('login dockerhub') {
                                         steps {
@@ -63,7 +57,7 @@ stage('Build Docker Image') {
                                    sh 'docker push azizbenhaha/angular-app:latest'
                                             }
 		  }
-
+*/
 
 
         stage('Run Angular Container') {
