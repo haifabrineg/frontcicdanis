@@ -48,7 +48,7 @@ pipeline{
                 script {
                     
 configFileProvider([configFile(fileId: 'maven-settings', variable: 'settings')]) {
-  sh 'mvn  -B -DskipTests deploy -s $settings'}
+  sh 'mvn  -B -DskipTests deploy -e'}
                 
                 }
             }
