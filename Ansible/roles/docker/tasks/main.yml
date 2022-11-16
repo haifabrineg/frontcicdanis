@@ -4,7 +4,7 @@
   docker_image:
     name: anissaidi/devops
     build:
-      path: /var/lib/jenkins/workspace/frontDEVOPS 
+      path: /var/lib/jenkins/workspace/FrontAngular
       pull: no
     source: build
     state: present
