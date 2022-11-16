@@ -16,7 +16,7 @@ pipeline
      stage ('build'){
       steps{
         script{
-            sh  "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml -e ansible_become_password=260198"
+            sh  "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml "
         }  
       }
      
