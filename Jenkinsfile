@@ -8,7 +8,7 @@ pipeline
      checkout([$class: 'GitSCM', branches: [[name: '*/main']],
          userRemoteConfigs: [[
          
-         url:'https://github.com/fedi-ba/cicd_angular']]])
+         url:'https://github.com/haifabrineg/frontcicdanis.git']]])
          
          }
       }
