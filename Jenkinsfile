@@ -16,7 +16,7 @@ pipeline
      stage ('build'){
       steps{
         script{
-            sh  "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml --become-user=jenkins "
+            sh  "ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml --become-user=jenkins -e ansible_become_password=123456 "
         }  
       }
      
