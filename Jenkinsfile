@@ -13,6 +13,24 @@ pipeline
          }
       }
      }
+        
+        
+        stage('Cleaning the project') {
+            steps{
+                sh "npm ci  " 
+            }
+        }
+        
+        
+        
+        
+        
+        stage('Artifact Construction') {
+            steps{
+                sh "ng build  " 
+            }
+        }
+       /*
      stage ('build'){
       steps{
         script{
@@ -34,6 +52,6 @@ pipeline
                     sh "ansible-playbook Ansible/docker-registry.yml -i Ansible/inventory/host.yml -e ansible_become_password=260198"
                 }
             }
-        }
+        }*/
          }
          }
